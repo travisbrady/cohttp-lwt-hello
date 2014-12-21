@@ -7,7 +7,6 @@ let make_server () =
   let callback (ch,conn_id) req body =
     Server.respond_string ~status:`OK ~body:"helloworld" ()
   in
-  (*let config = Server.make ~callback ~conn_closed () in*)
   let config = Server.make ~callback () in
   let ctx = Cohttp_lwt_unix_net.init () in
   let tcp_mode = `TCP (`Port 8081) in

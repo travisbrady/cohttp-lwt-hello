@@ -14,3 +14,11 @@ Executable hello
   CompiledObject:     best
   Install:            false
   BuildDepends:       cohttp, cohttp.lwt, lwt.syntax
+
+Executable json_bench
+  Path:               lib
+  MainIs:             json_bench.ml
+  Custom:             true
+  CompiledObject:     best
+  Install:            false
+  BuildDepends:       cohttp, atdgen, yojson, cohttp.lwt

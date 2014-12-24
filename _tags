@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: ee22b329e6e9c0555d3371c4f77ae444)
+# DO NOT EDIT (digest: b3555889cab3a09dcf4365e426e5b9b6)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -18,8 +18,16 @@ true: annot, bin_annot
 <lib/hello.{native,byte}>: pkg_cohttp
 <lib/hello.{native,byte}>: pkg_cohttp.lwt
 <lib/hello.{native,byte}>: pkg_lwt.syntax
-<lib/*.ml{,i,y}>: pkg_cohttp
-<lib/*.ml{,i,y}>: pkg_cohttp.lwt
 <lib/*.ml{,i,y}>: pkg_lwt.syntax
 <lib/hello.{native,byte}>: custom
+# Executable json_bench
+<lib/json_bench.{native,byte}>: pkg_atdgen
+<lib/json_bench.{native,byte}>: pkg_cohttp
+<lib/json_bench.{native,byte}>: pkg_cohttp.lwt
+<lib/json_bench.{native,byte}>: pkg_yojson
+<lib/*.ml{,i,y}>: pkg_atdgen
+<lib/*.ml{,i,y}>: pkg_cohttp
+<lib/*.ml{,i,y}>: pkg_cohttp.lwt
+<lib/*.ml{,i,y}>: pkg_yojson
+<lib/json_bench.{native,byte}>: custom
 # OASIS_STOP
